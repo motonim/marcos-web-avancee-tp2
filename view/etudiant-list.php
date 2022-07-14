@@ -61,7 +61,6 @@
             <div class="container">
                 <div class="list__title flex">
                     <h1>Enseignant</h1>
-                    <!-- <a href="enseignant-create.php" class="etudiant__create--link"><span class="etudiant__create--text">CREATE</span><i class="fa-solid fa-user-plus"></i></a> -->
                 </div>
                 <table>
                     <thead>
@@ -70,7 +69,6 @@
                             <th>Nom</th>
                             <th>Phone</th>
                             <th>Courriel</th>
-                            <!-- <th>Edit</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -80,8 +78,6 @@
                             <td>{{ enseignant.nom }}</td>
                             <td>{{ enseignant.phone }}</td>
                             <td>{{ enseignant.courriel }}</td>
-                            <!-- <td>{{ etudiant.groupe_idgroupe }}</td>
-                            <td><a href="{{path}}etudiant/show/{{etudiant.idetudiant}}"><i class="fa-solid fa-pen-to-square"></i></a></td> -->
                         </tr>
                         {% endfor %}
                     </tbody>
@@ -118,29 +114,5 @@
             </div>
         </div>
     </div>
-
-    <!-- <h1>Liste</h1>
-    <table>
-        <tr>
-            <th>Prenom</th>
-            <th>Nom</th>
-            <th>Phone</th>
-            <th>Courriel</th>
-            <th>Groupe</th>
-            <th>Afficher</th>
-        </tr>
-
-        {% for etudiant in etudiants %}
-        <tr>
-            <td>{{ etudiant.prenom }}</td>
-            <td>{{ etudiant.nom }}</td>
-            <td>{{ etudiant.phone }}</td>
-            <td>{{ etudiant.courriel }}</td>
-            <td>{{ etudiant.groupe_idgroupe }}</td>
-            <td><a href="{{path}}etudiant/show/{{etudiant.idetudiant}}">Afficher</a></td>
-        </tr>
-        {% endfor %}
-
-    </table> -->
 </body>
 </html>

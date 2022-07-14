@@ -5,7 +5,6 @@ require_once __DIR__.'/library/Twig.php';
 
 
 $url = isset($_SERVER['PATH_INFO']) ? explode('/', ltrim($_SERVER['PATH_INFO'], '/')) : '/';
-//print_r($url);
 
 if($url == '/'){
   $controllerHome = __DIR__.'/controller/ControllerHome.php';
@@ -20,12 +19,10 @@ if($url == '/'){
   if(file_exists($controllerPath)){
     require_once $controllerPath;
     $controllerName = 'Controller'.$requestURL;
-    // print_r($controllerName);
     $controller = new $controllerName;
 
     if(isset($url[1])){
       $method = $url[1];
-      // print_r($method);
 
       if(isset($url[2])) {
         $value = $url[2];

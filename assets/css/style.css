@@ -185,7 +185,6 @@ th.cours__desc {
   transition: color .3s ease,
               background-color .3s ease;
   font-size: 20px;
-  margin-left: 15px;
 }
 
 .form__submit:hover {
@@ -203,34 +202,28 @@ th.cours__desc {
   margin-left: 20px;
 }
 
-
-/*
-
-
-body {
-  margin: auto;
-  padding-left: 30px;
-  background: lightblue;
-  font-family: sans-serif;
-
-}
-input, select {
-  padding: 10px;
-  width: 150px;
-  display: block;
-  margin: 5px;
-}
-.error{
-  color: red;
+.home__list {
+  color: #fff;
+  background: #4646c4;
+  border: 2px solid #4646c4;
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: color .3s ease,
+              background-color .3s ease;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-table {
-  width: 100%;
-  background-color: white;
-  border-collapse: collapse;
+.home {
+  padding: 100px 0;
 }
 
-td {
-  border: 1px solid darkslategrey;
+.home__list:hover {
+  color: #4646c4;
+  background-color: #fff;
 }
-*/
+
+.text-right {
+  text-align: right;
+  margin-top: 10px;
+}

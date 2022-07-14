@@ -45,10 +45,8 @@ abstract class CRUD extends PDO{
 
     public function update($data){
         $id = $data[$this->primaryKey];
-        print_r($id);
         $data_keys = array_fill_keys($this->fillable, '');
         $data = array_intersect_key($data, $data_keys);
-        print_r($data);
 
         $champRequete = null;
         foreach($data as $key=>$value){
@@ -56,42 +54,30 @@ abstract class CRUD extends PDO{
         }
         $champRequete = rtrim($champRequete, ", ");
         $sql = "UPDATE $this->table SET $champRequete WHERE $this->primaryKey = :$this->primaryKey";
-
-        echo "<br>";
-        print_r($sql);
-
+        
         $data[$this->primaryKey] = $id;
-        echo "<br>";
-        print_r($data);
-
+        
         $query= $this->prepare($sql);
         foreach($data as $key=>$value){
             $query->bindValue(":$key", $value);
         }
-
         if(!$query->execute()){
             print_r($query->errorInfo());
         }else{
             return $id;
-        }     
+        }    
     }
 
     public function delete($data){
         $sql = "DELETE FROM $this->table WHERE $this->primaryKey = :$this->primaryKey";
-        print_r($data);
-        print_r($sql);
-        // echo $sql;
-        die();
-
         $query = $this->prepare($sql);
         $query->bindValue(":$this->primaryKey", $data[$this->primaryKey]);
         if(!$query->execute()){
             print_r($query->errorInfo());
         }else{
+            print_r(true);
             return true;
         }
     }
-
-
     
 }

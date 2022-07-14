@@ -21,21 +21,15 @@
         </div>
     </header>
 
-    <div class="list">
+    <div class="home">
         <div class="px">
             <div class="container">
-                <div class="list__title flex">
-                    <h1>Bienvenu!</h1>
-                    <a href="{{path}}etudiant/list">Aller voir la liste</a>
-                    <!-- <ul>
-                        <li><a href="{{path}}etudiant/list">List</a></li>
-                        <li><a href="{{path}}etudiant/create">Ajouter</a></li>
-                    </ul> -->
+                <div class="flex">
+                    <h1>Bienvenue!</h1>
+                    <a class="home__list" href="{{path}}etudiant/list">Aller voir la liste</a>
                 </div>
             </div>
         </div>
     </div>
-
-
 </body>
 </html>

@@ -28,8 +28,9 @@
                 {% if errors is defined %}
                     <span class="error">{{ errors|raw }}</span>
                 {% endif %}
+
                 <form action="{{path}}etudiant/update" method="post" class="form__create">
-                    <input type="hidden" name="id" value="{{ etudiant.idetudiant }}">
+                    <input type="hidden" name="idetudiant" value="{{ etudiant.idetudiant }}">
 
                     <div class="form__nomComplet flex">
                         <div class="form__prenom">
@@ -64,15 +65,14 @@
                                 {% endfor %}
                             </select>
                         </div>
-
                         <div class="form__btn">
                             <input class="form__submit" type="submit" value="Mise à jour">
-                            <form action="{{path}}etudiant/delete" method="post">
-                                <input type="hidden" name="id" value="{{ etudiant.idetudiant }}">
-                                <input class="form__submit" type="submit" value="Effacer">
-                            </form>
                         </div>
                     </div>
+                </form>
+                <form action="{{path}}etudiant/delete" method="post" class="text-right">
+                    <input type="hidden" name="idetudiant" value="{{ etudiant.idetudiant }}">
+                    <input class="form__submit" type="submit" value="Effacer">
                 </form>
             </div>
         </div>

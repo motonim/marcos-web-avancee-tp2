@@ -8,7 +8,7 @@
       <link rel="stylesheet" href="{{path}}assets/css/style.css">
 </head>
 <body>
-      <header class="header">
+    <header class="header">
         <div class="container flex">
             <div class="header__text">
                 <h1>Conception et Programmation de Site web</h1>
@@ -68,5 +68,9 @@
                         </div>
                     </div>
                 </form>
+
+            </div>
+        </div>
+    </div>
 </body>
 </html>

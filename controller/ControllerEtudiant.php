@@ -49,13 +49,11 @@ class ControllerEtudiant{
         RequirePage::redirect('etudiant/list');  
 
       }else{
-       // var_dump($validation->getErrors());
          $errors =  $validation->displayErrors();
 
          $groupes = new ModelGroupe;
          $groupes = $groupes->select('nom');
 
-        // return Twig::render('etudiant-insert.php', ['errors' => $errors, 'villes'=> $villes, 'etudiant' => $_POST]);
         return Twig::render('etudiant-insert.php', ['errors' => $errors, 'groupes'=>$groupes, 'etudiant' => $_POST]);
       }
 
@@ -85,14 +83,9 @@ class ControllerEtudiant{
       if($validation->isSuccess()){
         $etudiant = new ModelEtudiant;
         $update = $etudiant->update($_POST, 1);
-
-        // print_r($update);
-        // die();
-        
         RequirePage::redirect('etudiant/list');  
 
       }else{
-      //  var_dump($validation->getErrors());
         $errors =  $validation->displayErrors();
 
         $groupes = new ModelGroupe;
@@ -108,10 +101,3 @@ class ControllerEtudiant{
       RequirePage::redirect('etudiant/list');
     }
 }
-
-
-//  domain.com/controller/method/value
-//              URL[0]    [1]    [2]
-
-
-
