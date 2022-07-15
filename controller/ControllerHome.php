@@ -3,7 +3,7 @@
 class ControllerHome{
 
     public function index(){
-       return Twig::render('index.php');
+       return Twig::render('etudiant-index.php');
     }
 
     public function error(){
